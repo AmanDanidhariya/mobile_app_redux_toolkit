@@ -26,7 +26,7 @@ const CartItem = ({id,img,title,amount,price}) => {
       <img src={img} alt={title} />
       <div>
         <h4>{title}</h4>
-        <h4 className="item price">${price}</h4>
+        <h4 className="item price">Rs:- {price}</h4>
         <button className="remove-btn" onClick={()=>{clearItem(id)}}>remove</button>
       </div>
       <div>

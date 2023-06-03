@@ -5,7 +5,6 @@ import {clearCart} from "../features/cart/cartSlice"
 const CartContainer = () => {
   const dispatch = useDispatch();
   const { cartItems, total, amount } = useSelector((store) => store.cart);
-
   const removeItem = (item) =>{
     dispatch(clearCart(item));
   }
@@ -34,7 +33,7 @@ const CartContainer = () => {
         <hr />
         <div className="cart-total">
           <h4>
-            total <span>${total}</span>
+            total <span>Rs:- {total.toFixed(2)}</span>
           </h4>
         </div>
         <button className="btn clear-btn" onClick={()=>removeItem()}>clear cart</button>

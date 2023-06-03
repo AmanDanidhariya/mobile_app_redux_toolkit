@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import { useSelector,useDispatch } from 'react-redux'
 import { calculateTotals } from './features/cart/cartSlice'
 import { useEffect } from 'react'
-
+import Model from './components/Model'
 function App() {
 const {cartItems} =  useSelector((store)=>store.cart)
 const dispatch = useDispatch();
@@ -15,6 +15,7 @@ useEffect(()=>{
 
   return (
     <main>
+    <Model/>
       <Navbar/>
       <CartContainer/>
     </main>
